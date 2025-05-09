@@ -8,7 +8,7 @@ Run as standalone or in-memory via execute-assembly or equivalent.
 
 ```
 > GlobalProtect_KeyGen.exe
-Usage: GlobalUnProtect.exe Computer_SID_VALUE
+Usage: GlobalProtect_KeyGen.exe Computer_SID_VALUE
 ```
 
 ```
@@ -19,5 +19,5 @@ Usage: GlobalUnProtect.exe Computer_SID_VALUE
         [*] Derived AES Key: FFD40E0D6894B0582E3AA0F2899F9FBEFFD40E0D6894B0582E3AA0F2899F9FBE
 ```
 
-# Original Source Code
+## Original Source Code
 https://github.com/rotarydrone/GlobalUnProtect
