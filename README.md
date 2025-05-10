@@ -1,6 +1,6 @@
 # GlobalProtect_KeyGen
 
-Tool for generating encryption key of GlobalProtect VPN from Computer SID.
+Tool for generating encryption key of GlobalProtect VPN configuration and cookies (after DPAPI decryption) using the Computer SID.
 
 ## Usage
 
@@ -9,7 +9,7 @@ Obtain Computer SID of target
 ((get-wmiobject -query "Select * from Win32_UserAccount Where LocalAccount = TRUE").SID -replace "\d+$","" -replace ".$")[0]
 ```
 
-Run offline to obtain AES key 
+Run offline to obtain encryption key
 ```
 > GlobalProtect_KeyGen.exe
 Usage: GlobalProtect_KeyGen.exe Computer_SID_VALUE
