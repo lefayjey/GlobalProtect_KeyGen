@@ -24,7 +24,7 @@ Usage: GlobalProtect_KeyGen.exe Computer_SID_VALUE
 ```
 
 ## Decrypt .dat files (after DPAPI decryption -> [dpapi.py](https://github.com/fortra/impacket/blob/master/examples/dpapi.py)) using CyberChef
-https://gchq.github.io/CyberChef/#recipe=AES_Decrypt(%7B'option':'Hex','string':'FFD40E0D6894B0582E3AA0F2899F9FBEFFD40E0D6894B0582E3AA0F2899F9FBE'%7D,%7B'option':'Hex','string':'0000000000000000'%7D,'CBC','Raw','Hex',%7B'option':'Hex','string':''%7D)
+https://gchq.github.io/CyberChef/#recipe=AES_Decrypt(%7B'option':'Hex','string':'FFD40E0D6894B0582E3AA0F2899F9FBEFFD40E0D6894B0582E3AA0F2899F9FBE'%7D,%7B'option':'Hex','string':'0000000000000000'%7D,'CBC','Raw','Raw',%7B'option':'Raw','string':''%7D,%7B'option':'Hex','string':''%7D)
 
 ## Original Source Code
 https://github.com/rotarydrone/GlobalUnProtect
